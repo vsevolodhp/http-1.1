@@ -38,7 +38,7 @@ func main() {
 					continue
 				}
 			}
-			fmt.Printf("connection from: %s\n", conn.RemoteAddr().String())
+			fmt.Printf("connection from: %v\n", conn.RemoteAddr())
 			wg.Add(1)
 			go handle(conn, &wg)
 		}
